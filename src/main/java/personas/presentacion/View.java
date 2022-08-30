@@ -1,6 +1,8 @@
 package personas.presentacion;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class View {
     private JPanel panel;
@@ -19,10 +21,20 @@ public class View {
     private JCheckBox otrosCheckBox;
     private JButton guardarButton;
     private JButton cancelarButton;
-//generar panel para el main
+
+    public View() {  //listener para guardar
+        guardarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(Nombre.getText()); //nombreFld
+                if(masculinoRadioButton.isSelected()) System.out.println('M');
+                System.out.println(estadoComboBox1.getSelectedItem());
+            }
+        });
+    }
+
+    //generar panel para el main
     public JPanel getPanel() {
         return panel;
     }
 }
-
-//new swing UI, Form

@@ -2,6 +2,7 @@ package personas.presentacion;
 import javax.swing.*;
 //project files
 //deberia ir en personas solo
+//new, swing UI, Form...
 public class Application {
     public static void main(String[] args) {
         try{
